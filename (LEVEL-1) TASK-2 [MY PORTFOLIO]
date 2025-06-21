@@ -1,0 +1,206 @@
+#HTML CODE WRITTEN BELOW 
+******************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manan Agrawal Portfolio</title>
+
+<link rel="stylesheet" href="my_portfolio.css">
+</head>
+<body>
+
+  <header>
+    <h1>Manan Agrawal</h1>
+    <p>Full Stack Developer | SIH Aspirant | GSoC Learner</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate developer who’s building a ultra level web dev skillset. I love full-stack challenges, GSoC contributions, and building real-world impactful apps. Let’s code the future!</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>MongoDB</li>
+      <li>Git</li>
+      <li>Express</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div>
+      <h3>Working Calculator</h3>
+      <p>A basic working calculator made by simple HTML CSS and JavaScript</p>
+      <img src="./image.png"   alt="Calculator" /> 
+    </div>
+  </section>
+
+  <section id="resume" class="resume">
+    <h2>Resume</h2>
+    <p>Want to work together or learn more? Grab my resume below:</p>
+    <a href="resume.pdf" download>📄 Download Resume</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Manan Agrawal | <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+  </footer>
+
+</body>
+</html>
+
+************************************************************************
+
+#let's move to CSS part now
+
+
+************************************************************************
+
+
+   * {
+      margin: 0; 
+      padding: 0 ;
+       box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #111827;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #a5b4fc;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #1f2937;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: #e0e7ff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      border-left: 5px solid #6366f1;
+      padding-left: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .skills ul, .projects {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills li {
+      display: inline-block;
+      background: #e0e7ff;
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+    }
+
+    .projects>div> img {
+      margin-left: 30%;
+      border: 2px solid black;
+      width: 100%;
+      max-width: 200px;
+      height: 200px;
+      border-radius: 8px;
+    }
+
+    .resume a {
+      background: #6366f1;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    
+    }
+
+
+    footer {
+      background: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      background: #10b981;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+  
