@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manan's Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+/* Here I have to take a pause for go understand about a issue on this page and I will complete code after understanding the part */
+    
+    .hero {
+      background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center center;
+      background-size: cover;
+      padding: 120px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .cta-button {
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #e55a00;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      nav li {
+        margin: 10px 0;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CodSoft Internship</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Build Websites. Learn Fast.</h2>
+    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+    <a href="#" class="cta-button">Explore Now</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Manan Agrawal  | Web Development Internship | Level 1 – Task 1
+  </footer>
+
+</body>
+</html>
