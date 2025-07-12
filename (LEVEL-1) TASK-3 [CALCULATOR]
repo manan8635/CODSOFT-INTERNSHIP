@@ -1,0 +1,134 @@
+******** ATTACHING HTML CSS AND JS THRU <style> and <script> Tags ********
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Basic Calculator</title>
+  <style>
+ body {
+      font-family: Arial, sans-serif;
+      background-color: lightgray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .calculator {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid gray;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #calc-screen {
+      height: 40px;
+      font-size: 24px;
+      margin-bottom: 15px;
+      padding: 5px 10px;
+      text-align: right;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+
+    .calc-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 60px);
+      grid-template-rows: repeat(5, 50px);
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .calc-buttons button {
+      font-size: 18px;
+      border: 1px solid gray;
+      border-radius: 6px;
+      background-color: lightblue;
+      cursor: pointer;
+    }
+
+    .calc-buttons button:hover {
+      background-color: deepskyblue;
+      color: white;
+    }
+
+    .calc-buttons button:active {
+      background-color: dodgerblue;
+    }
+
+    .operator {
+      background-color: orange;
+    }
+
+    .clear {
+      background-color: red;
+      color: white;
+    }
+
+    .equal {
+      background-color: green;
+      color: white;
+    }
+</style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="calc-screen" readonly />
+
+    <div class="calc-buttons">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>/</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>*</button>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>-</button>
+
+      <button>0</button>
+      <button>C</button>
+      <button>=</button>
+      <button>+</button>
+    </div>
+  </div>
+
+  <script>
+    const display = document.getElementById('calc-screen');
+    const buttons = document.querySelectorAll('.calc-buttons button');
+
+    let currentInput = '';
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const value = button.textContent;
+
+        if (value === 'C') {
+          currentInput = '';
+          display.value = '';
+        } else if (value === '=') {
+          try {
+            const result = new Function('return ' + currentInput)();
+            display.value = result;
+            currentInput = '';
+          } catch {
+            display.value = 'Error';
+            currentInput = '';
+          }
+        } else {
+          currentInput += value;
+          display.value = currentInput;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
